@@ -5,6 +5,7 @@
         "svix",
         "tanstack",
         "trpc",
+        "unfollowing",
         "Zypher"
     ]
 }

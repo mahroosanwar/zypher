@@ -28,21 +28,21 @@ export const Actions = ({
 
   const handleFollow = () => {
     startTransition(() => {
-      onUnfollow(hostIdentity)
+      onFollow(hostIdentity)
         .then((data) =>
-          toast.success(`You have unfollowed ${data.following.username}`)
+          toast.success(`You are now following ${data.following.username}.`)
         )
-        .catch(() => toast.error("Something went wrong"));
+        .catch(() => toast.error("Something went wrong while following."));
     });
   };
 
   const handleUnfollow = () => {
     startTransition(() => {
-      onFollow(hostIdentity)
+      onUnfollow(hostIdentity)
         .then((data) =>
-          toast.success(`You are following ${data.following.username}`)
+          toast.success(`You have unfollowed ${data.following.username}.`)
         )
-        .catch(() => toast.error("Something went wrong"));
+        .catch(() => toast.error("Something went wrong while unfollowing."));
     });
   };
 
